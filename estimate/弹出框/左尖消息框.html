@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>尖框</title>
+    <style>
+
+        #box{
+            /*width: 50px;*/
+            width: auto;
+            height: 20px;
+            background: #c5ee95;
+            position: relative;
+            margin: 20px;
+            border: 1px solid #9a97a4;
+            font-size: 10px;
+            display: inline-block;
+        }
+        .triangle{
+            width: 0px;
+            height: 0px;
+            border-style: solid;
+            border-width: 5px;
+            border-color:transparent #c5ee95 transparent  transparent;
+            position: absolute;
+            top: 5px;
+            left: -10px;
+            z-index: 1;
+        }
+        .triangle_outer{
+            width: 0px;
+            height: 0px;
+            border-style: solid;
+            border-width: 5px;
+            border-color:transparent #9a97a4 transparent  transparent;
+            position: absolute;
+            top: 5px;
+            left: -11px;
+        }
+        #wenben{
+            position: relative;
+            top: 2px;
+
+
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <div class="triangle"></div>
+    <div class="triangle_outer"></div>
+    <span id="wenben">太好了啊saasdasdasadasad</span>
+</div>
+
+
+</body>
+</html>

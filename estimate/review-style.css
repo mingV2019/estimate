@@ -1,0 +1,316 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+}
+.review-content{
+    width:70%;
+    height: 900px;
+    margin:0px auto;
+    padding-top: 100px;
+    background-color: snow;
+}
+.review-box{
+    width: 950px;
+    height: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid #d9e3eb;
+    background-color: white;
+}
+.review-box-heading{
+    width: 100%;
+    height: 37px;
+    background-color: #efefef;
+    border-bottom: 2px solid #f40;
+    position: relative;
+}
+.review-box-heading-title{
+    float: left;
+    background-color: #FF4400;
+    width: 147.84px;
+    height: 100%;
+    text-align: center;;
+}
+.title-text{
+    height: 100%;
+    padding-top: 5px;
+    font-family: tahoma;
+    color: white;
+}
+.review-box-heading-nav{
+    font-size: 12px;
+    float:right;
+    width: 250px;
+    height: 25px;
+    margin-top: 10px;
+    list-style-type: none;
+}
+.review-box-heading-nav li{
+    padding-left: 10px;
+    width: 90px;
+    display: inline;
+    /*position: relative;*/
+}
+.dropbtn{
+    font-size: 12px;
+    float: right;
+    margin-left: 20px;
+    padding-left:20px;
+    padding-right: 17px;
+    padding-top:10px;
+    width: 48px;
+    height: 27px;
+    position: relative;
+}
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #FFF;
+    border-width: 2px 2px 1px 2px;
+    border-style:solid;
+    border-color:#CCC #CCC #CCC #CCC ;
+}
+/*隐藏评论须知弹出框*/
+.dropdown-content{
+    background-color: #FFF;
+    border: 3px solid #CCC;
+    font-size: 12px;
+    width: 520px;
+    padding: 20px;
+    margin-top: 0px;
+    z-index: 1;
+    position: absolute;
+    top: 99%;
+    right: 0px;
+    display: none;
+}
+.show {display:block;}
+/*向下箭头*/
+.down-shark{
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 4px;
+    border-color:#441eee transparent transparent  transparent;
+    position: absolute;
+    top: 16px;
+    right:2px;
+    z-index: 1;
+}
+
+
+.review-box-content{
+    width: 100%;
+    height: auto;
+    /*background-color: black;*/
+    /*border: 1px solid #d9e3eb;*/
+    border-bottom:1px solid #d9e3eb ;
+}
+.review-box-content-top{
+    width: 100%;
+    height: 274.2px;
+    /*background-color: white;*/
+}
+.review-box-content-botom{
+    width: 100%;
+    height: 220px;
+    /*background-color: #fffebe;*/
+    border-top:2px dashed #d9e3eb;
+}
+.review-space{
+    width: 100%;
+    height:214.2px;
+    /*background-color: coral;*/
+    padding: 30px 0px;
+
+}
+.review-space-left{
+    float: left;
+    width: 250px;
+    height: 100%;
+    /*background-color: white;*/
+}
+.review-goods{
+    width: 160px;
+    height: auto;
+    padding-left: 90px;
+}
+.review-space-right{
+    float: left;
+    width: 600px;
+    height: 100%;
+    padding-left: 30px;
+    /*background-color: white;*/
+}
+.review-radio{
+    width: 250px;
+    height: 30px;
+    padding-top: 10px;
+    /*background-color: #cb3c38;*/
+}
+.level-images{
+    width: 21.6px;
+    height: 25px;
+    background: url("images/level.png") no-repeat;
+    background-size:auto 25px;
+}
+.review-radio label{
+    display: inline-block;
+}
+.review-radio label input{
+    display: inline-block;
+}
+.review-radio label div{
+    display: inline-block;
+
+}
+.review-area{
+    width: 88%;
+    height: 147px;
+    background: #EEF8FD;
+    border: 1px solid #DAF1FC;
+    padding: 3px;
+    margin-top: 25px;
+}
+.public-anonymous{
+    width: 30%;
+    height: 26px;
+    padding-left:70% ;
+    padding-top: 9px;
+}
+
+.review-box-content-botom-left{
+    float: left;
+    width: 25%;
+    height: 100%;
+}
+.review-box-content-botom-right{
+    float: left;
+    width: 75%;
+    height: 100%;
+    font-size: 12px;
+
+
+}
+.review-box-content-botom-left-label{
+    width: 58%;
+    height: 34px;
+    padding-top: 14px;
+    background-color: #d9e3eb;
+    text-align: center;
+    position: relative;
+    top: 90px;
+    left: 100px;
+    color: #9a97a4;
+}
+
+
+/*按钮*/
+
+.review-box-submit{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    /*background-color: #9a97a4;*/
+}
+.review-box-button{
+    position: absolute;
+    bottom: 0;
+    left: 310px;
+    width: 130px;
+    height: 40px;
+    border-radius: 10px;
+    border-width: 0px;
+    background-color: #3295d7;
+    color: white;
+}
+/*分五星动态显示*/
+
+.review-service{
+    height: 50%;
+    width: 350px;
+    /*background-color: #EEF8FD;*/
+    margin-left: 70px;
+    position: relative;
+    top: 70px;
+}
+.review-service ul{
+    list-style-type: none;
+}
+.review-service li{
+    padding-top: 13px;
+    height: 27px;
+}
+.before-star{
+    float: left;
+    margin-right:5px;
+    position: relative;
+    top: 2px;
+
+}
+
+
+/*星星星星星星星*/
+#star-act1 .ct-star,#star-act2 .ct-star,#star-act3 .ct-star{
+    float: left;
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    background: url("images/star.png") no-repeat;
+    cursor: pointer;
+    margin-left: 2px;
+    padding-bottom: 5px;
+}
+#star-act1 .star-on,#star-act2 .star-on,#star-act3 .star-on{
+    background-position:-2px 0;/*显示红色的星*/
+}
+#star-act1 .star-off,#star-act2 .star-off,#star-act3 .star-off{
+    background-position:-39px 0;/*显示灰色的星*/
+}
+#f-star1,#f-star2,#f-star3{
+    position: relative;
+    top: 2px;
+    margin-left: 10px;
+    float: left;
+    font-size: 12px;
+    font-family: '微软雅黑';
+    color: #cb3c38;
+}
+/*尖角消息框*/
+
+#Sharpbox{
+    /*width: 50px;*/
+    width: auto;
+    height: 20px;
+    background: #eed1ad;
+    position: relative;
+    border: 1px solid #9a97a4;
+    font-size: 10px;
+    display: inline-block;
+}
+
+.triangle{
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 5px;
+    border-color:transparent #eed1ad transparent  transparent;
+    position: absolute;
+    top: 5px;
+    left: -10px;
+    z-index: 1;
+}
+.triangle_outer{
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 5px;
+    border-color:transparent black transparent  transparent;
+    position: absolute;
+    top: 5px;
+    left: -11px;
+}
+#wenben{
+    position: relative;
+    top: 2px;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: #f40;
+            margin: 50px 0 0 50px;
+        }
+
+        div {
+            margin: 60px 0 0 50px;
+            padding: 20px;
+            outline: none;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+<a id="search"></a>
+<div id="searchBox"></div>
+<script type="text/javascript">
+    window.onload = function () {
+        var obj = document.getElementById("searchBox");
+        var oBtn = document.getElementById("search");
+        searchBox.style.display = "none";
+        oBtn.onclick = function () {
+            obj.style.display = "block";
+        }
+        document.onclick = function (event) {
+            //
+            var e = event || window.event;//兼容ie和非ie的event
+            var aim = e.srcElement || e.target; //兼容ie和非ie的事件源
+            //
+            if (e.srcElement) {
+                var aim = e.srcElement;
+                if (aim != oBtn && aim != obj) {
+                    obj.style.display = "none";
+                }
+            } else {
+                var aim = e.target;
+                if (aim != oBtn && aim != obj) {
+                    obj.style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

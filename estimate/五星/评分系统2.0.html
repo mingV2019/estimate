@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>单行五星评分</title>
+    <style>
+        #wrap{
+            width: 400px;
+            margin: 0 auto;
+        }
+        #star-act .ct-star{
+            display: inline-block;
+            width: 19px;
+            height: 19px;
+            background: url("star.png") no-repeat;
+            cursor: pointer;
+        }
+        #star-act .star-on{
+            background-position:-2px 0;/*显示黄色的星，图片左移2px，正好看到星*/
+        }
+        #star-act .star-off{
+            background-position:-39px 0;/*显示灰色的星，图片左移39px，正好看到灰星*/
+        }
+        #f-star{
+            font-size: 12px;
+            font-family: '微软雅黑';
+            color: #999;
+            font-weight: normal;
+        }
+    </style>
+    <script>
+         window.onload = function () {              //onload 事件会在页面或图像加载完成后立即发生。
+            var oAct = document.getElementById('star-act');
+            var aStar = oAct.getElementsByTagName('b');
+            var oTxt = document.getElementById('f-star');
+            var aText = ['非常差','一般','过得去','很好','不能再好了'];
+            var bOn = false;
+            for(var i=0; i<aStar.length ; i++){
+                aStar[i].index = i;
+                setStar(aStar[i]);
+            }
+            function setStar(li){
+                li.onmouseenter = function(){       //onmouseenter 事件在鼠标指针移动到元素上时触发。
+                    if(bOn == false){
+                        for(var i=0; i<=li.index; i++){
+                            aStar[i].classList.remove('star-off');//移除元素的star-off样式
+                            aStar[i].classList.add('star-on');//修改元素的样式为star-on
+                        }
+                        oTxt.innerHTML = aText[li.index];
+                    }
+                }
+
+                li.onmouseleave = function () {     //onmouseleave 事件在鼠标移除元素时触发
+                    if(bOn == false){
+                        for(var i=0; i<=li.index; i++){
+                            aStar[i].classList.remove('star-on');
+                            aStar[i].classList.add('star-off');
+                        }
+                        oTxt.innerHTML = '';
+                    }
+                }
+
+                li.onclick = function () {      //onclick 事件会在元素被点击时发生。
+                    for(var i=0; i<=li.index; i++){
+                        aStar[i].classList.remove('star-off');
+                        aStar[i].classList.add('star-on');
+                    }
+                    oTxt.innerHTML = aText[li.index];
+                    bOn = true;
+                }
+
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="wrap">
+    <h4>
+        您的评论
+        <span id="star-act">
+            <b class="ct-star star-off"></b>
+            <b class="ct-star star-off"></b>
+            <b class="ct-star star-off"></b>
+            <b class="ct-star star-off"></b>
+            <b class="ct-star star-off"></b>
+        </span>
+        <span id="f-star"></span>
+    </h4>
+</div>
+</body>
+</html>
